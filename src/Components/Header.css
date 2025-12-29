@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: chocolate;
+}
+
+input{
+    flex-grow: 1;
+}
+
+#search-image{
+    height: 50px;
+    width: 50px;
+}
+
+.cart{
+    color: aliceblue;
+}
+
+#cart-image{
+    height: 50px;
+    width: 50px;
+}
+
+#cart-count{
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    font-weight: bold;
+}
