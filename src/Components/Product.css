@@ -1,0 +1,18 @@
+.product-container{
+    border: 1px solid rgb(219, 199, 199);
+    border-radius: 5px;
+    width: 200px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#product-image{
+    height: 150px;
+    width: 150px;
+}
+
+#rating-image{
+    height: 22px;
+}

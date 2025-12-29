@@ -4,13 +4,13 @@ import Home from './Components/Home';
 import React from 'react';
 import { Routes,Route } from 'react-router';
 function App() {
-  // const [count,setCount]=React.useState(0);
-  // const updateCartCount=()=>{
-  //   setCount(count+1);
-  // }
+  const [count,setCount]=React.useState(0);
+  const updateCartCount=(quantity)=>{
+    setCount(count+quantity);
+  }
   return (
     <Routes>
-      <Route path="/" element={<Home />}/>
+      <Route path="/" element={<Home count={count} updateCartCount={updateCartCount}/>}/>
       <Route path='/checkout' element={<Checkout />}/>
       <Route path='/orders' element={<Orders />}/>
     </Routes>
