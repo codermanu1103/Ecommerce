@@ -13,6 +13,7 @@ function Product(props) {
             <div className="price">
                 ${props.price}
             </div>
+            
             <div className="dropdown">
                 <select name="quantity" id="quantity" value={quantity} onChange={(e)=>{setQuantity(Number(e.target.value))}}>
                     <option value="1">1</option>

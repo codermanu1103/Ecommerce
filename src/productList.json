@@ -1,0 +1,11 @@
+[
+    {
+        "id":1,
+        "name": "Black and Gray Athletic Cotton Socks",
+        "image": "public\\images\\products\\athletic-cotton-socks-6-pairs.jpg",
+        "rating": 4.5,
+        "reviews": 87,
+        "stock": 25,
+        "price": 10.90
+    }
+]

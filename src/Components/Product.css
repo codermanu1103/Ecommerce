@@ -13,6 +13,32 @@
     width: 150px;
 }
 
+.rating{
+    display: flex;
+    align-items: center;
+}
+
 #rating-image{
     height: 22px;
+}
+
+#rating-count{
+    padding-top: 3px;
+    padding-left: 5px;
+    font-size: 21px;
+}
+
+.price{
+    margin: 3px;
+}
+
+.dropdown{
+    margin: 3px;
+    border-radius: 5px;
+}
+
+#addtocart{
+    background-color:chocolate;
+    color: aliceblue;
+    border-radius: 10px;
 }
