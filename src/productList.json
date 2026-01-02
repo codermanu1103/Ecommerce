@@ -1,11 +1,22 @@
 [
     {
         "id":1,
-        "name": "Black and Gray Athletic Cotton Socks",
+        "name": "Cotton Socks",
         "image": "public\\images\\products\\athletic-cotton-socks-6-pairs.jpg",
+        "ratingImage":"public\\images\\ratings\\rating-45.png",
         "rating": 4.5,
-        "reviews": 87,
+        "ratingCount": 87,
         "stock": 25,
         "price": 10.90
+    },
+    {
+        "id":2,
+        "name": "2-slot-toaster-white",
+        "image": "public\\images\\products\\2-slot-toaster-white.jpg",
+        "ratingImage":"public\\images\\ratings\\rating-50.png",
+        "rating": 5,
+        "ratingCount": 49,
+        "stock": 100,
+        "price": 50
     }
 ]

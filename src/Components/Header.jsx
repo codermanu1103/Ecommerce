@@ -22,7 +22,6 @@ function Header(props) {
                     <span id='cart-text'>Cart</span>
                 </Link>
             </div>
-
         </div>
     );
 }

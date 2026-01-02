@@ -2,6 +2,14 @@ import './Product.css';
 import React from 'react';
 function Product(props) {
     const [quantity,setQuantity]=React.useState(1);
+    const addItemsToCart=()=>{
+        props.updateCartCount(quantity);
+        const item={
+            productId:props.id,
+            quantityadded: quantity, 
+        }
+        props.updateCheckoutItems(item);
+    }
     return (
         <div className="product-container">
             <img id="product-image" src={props.image} alt={props.name} />
@@ -28,7 +36,7 @@ function Product(props) {
                     <option value="10">10</option>
                 </select>
             </div>
-            <button id="addtocart" onClick={()=>{props.updateCartCount(quantity)}}>Add to Cart</button>
+            <button id="addtocart" onClick={addItemsToCart}>Add to Cart</button>
 
         </div>
     );

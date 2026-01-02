@@ -5,13 +5,17 @@ import React from 'react';
 import { Routes,Route } from 'react-router';
 function App() {
   const [count,setCount]=React.useState(0);
+  const [checkoutItems,setCheckoutItems]=React.useState([]);
+  const updateCheckoutItems=(item)=>{
+    setCheckoutItems(prevItems=>[...prevItems,item])
+  }
   const updateCartCount=(quantity)=>{
     setCount(count+quantity);
   }
   return (
     <Routes>
-      <Route path="/" element={<Home count={count} updateCartCount={updateCartCount}/>}/>
-      <Route path='/checkout' element={<Checkout />}/>
+      <Route path="/" element={<Home count={count} updateCartCount={updateCartCount} updateCheckoutItems={updateCheckoutItems}/>}/>
+      <Route path='/checkout' element={<Checkout count={count} updateCartCount={updateCartCount} items={checkoutItems} updateCheckoutItems={updateCheckoutItems}/>}/>
       <Route path='/orders' element={<Orders />}/>
     </Routes>
   );
