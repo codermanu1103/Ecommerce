@@ -11,8 +11,15 @@ function Checkout(props) {
         <>
             <Header count={props.count}/>
             <button onClick={()=>{displayAllItems(props.items)}}>Show</button>
-            <CartProduct items={props.items}/>
-            Checkout Page
+            {props.items.map(item=>(
+                <CartProduct 
+                    productId={item.productId}
+                    quantity={item.quantity}
+                    updateCartCount={props.updateCartCount}
+                    updateCartQuantity={props.updateCartQuantity}
+                />
+            ))}
+            
         </>
     );
 }

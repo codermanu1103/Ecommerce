@@ -1,14 +1,22 @@
-import './Product.css';
+import './ComponentsCSS/Product.css';
 import React from 'react';
 function Product(props) {
     const [quantity,setQuantity]=React.useState(1);
     const addItemsToCart=()=>{
         props.updateCartCount(quantity);
-        const item={
-            productId:props.id,
-            quantityadded: quantity, 
+        const val=props.items?.find(item=>item.productId===props.id);
+        console.log(props.items);
+        console.log(val);
+        if(val===undefined) {
+            const item={
+                productId:props.id,
+                quantity: quantity, 
+            }
+            props.updateCheckoutItems(item);
         }
-        props.updateCheckoutItems(item);
+        else {
+            props.updateCartQuantity(props.id,val.quantity+quantity);
+        }
     }
     return (
         <div className="product-container">

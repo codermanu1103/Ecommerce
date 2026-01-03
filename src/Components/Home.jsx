@@ -15,7 +15,9 @@ function Home(props) {
                         ratingCount={product.ratingCount}
                         price={product.price}
                         updateCartCount={props.updateCartCount}
+                        items={props.items} 
                         updateCheckoutItems={props.updateCheckoutItems}
+                        updateCartQuantity={props.updateCartQuantity}
                     />
                 ))
             }
